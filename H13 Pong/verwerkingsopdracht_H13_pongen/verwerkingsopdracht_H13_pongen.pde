@@ -64,7 +64,7 @@ void draw(){
   if (paneelRight.top() < 0) {
     paneelRight.y = paneelRight.h/2;
   }
-   
+    
   //voor als de pong achter de paneel komt
   if ( pong.left() < paneelLeft.right() && pong.y > paneelLeft.top() && pong.y < paneelLeft.bottom()){
     pong.speedX = -pong.speedX;
