@@ -4,12 +4,12 @@ Paneel paneelLeft;
 Paneel paneelRight;
 //score
 int scoreLeft = 0;
-int scoreRight = 0;
+int scoreRight = 0; 
 
 void setup(){
   size(800,600);
   //grootte en snelheid van de pong
-  pong = new Pong(width/2, height/2, 50); 
+  pong = new Pong(width/2, height/2, 25); 
   pong.speedX = 5; 
   pong.speedY = random(-3,3);
   
@@ -29,7 +29,7 @@ void draw(){
   paneelRight.move();
   paneelRight.display(); //tekent 1 paneel
 
-  //de pong collision
+  //de pong collision en score plus
   if (pong.right() > width) {
     scoreLeft = scoreLeft + 1;
     pong.x = width/2;
